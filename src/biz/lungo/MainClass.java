@@ -7,11 +7,12 @@ import java.util.Scanner;
 
 public class MainClass {
     private static ArrayList<String> al = new ArrayList<String>();
-	private static final int REMOVE_ELEMENT_INDEX = 1;
+    private static Scanner sc = new Scanner(System.in);
+    private static final int REMOVE_ELEMENT_INDEX = 1;
     private static final int REMOVE_ELEMENT_NAME = 2;
-	private static final int ADD = 1;
-	private static final int SHOW_COLLECTION = 2;
-	private static final int REMOVE_ELEMENT = 3;
+    private static final int ADD = 1;
+    private static final int SHOW_COLLECTION = 2;
+    private static final int REMOVE_ELEMENT = 3;
     private static final int REMOVE_RANGE = 4;
     private static final int ADD_ELEMENT_COMMA = 5;
     private static final int REMOVE_ELEMENT_COMMA = 6;
@@ -19,29 +20,29 @@ public class MainClass {
     private static final int EXIT = 8;
 
     public static void main(String[] args) {
-		
-		while (true){
-			System.out.println("Выберите действие:");
-			System.out.println("1. Добавить слово");
-			System.out.println("2. Вывести коллекцию на экран");
-			System.out.println("3. Удалить элемент");
+
+        while (true){
+            System.out.println("Выберите действие:");
+            System.out.println("1. Добавить слово");
+            System.out.println("2. Вывести коллекцию на экран");
+            System.out.println("3. Удалить элемент");
             System.out.println("4. Удалить элементы в диапазоне");
             System.out.println("5. Добавить элементы через запятую");
             System.out.println("6. Удалить элементы через запятую");
             System.out.println("7. Удалить все элементы, кроме указанных");
             System.out.println("8. Выйти из программы");
-            int choice = new Scanner(System.in).nextInt();
-			if (choice == ADD){
-				elementAdd();
+            int choice = sc.nextInt();
+            if (choice == ADD){
+                elementAdd();
                 listShow();
-			}
-			else if (choice == SHOW_COLLECTION){
-				listShow();
-			}
-			else if (choice == REMOVE_ELEMENT){
-				elementRemove();
+            }
+            else if (choice == SHOW_COLLECTION){
                 listShow();
-			}
+            }
+            else if (choice == REMOVE_ELEMENT){
+                elementRemove();
+                listShow();
+            }
             else if (choice == REMOVE_RANGE){
                 elementRangeRemove();
                 listShow();
@@ -61,19 +62,19 @@ public class MainClass {
             else if (choice == EXIT){
                 break;
             }
-			else {
-				System.out.println("Неверный выбор");
-			}
-		}
-	}
+            else {
+                System.out.println("Неверный выбор");
+            }
+        }
+    }
 
     private static void elementExceptRemove() {
         System.out.println("1. Удалить элементы по индексам");
         System.out.println("2. Удалить элементы по значениям");
-        int choice = new Scanner(System.in).nextInt();
+        int choice = sc.nextInt();
         if (choice == REMOVE_ELEMENT_INDEX){
             System.out.println("Введите через запятую индексы элементов, которые хотите оставить в коллекции (от 0 до " + (al.size()-1) + "):");
-            String input = new Scanner(System.in).nextLine();
+            String input = sc.nextLine();
             String[] inputArray = splitToArray(input);
             if (inputArray == null){
                 return;
@@ -89,7 +90,7 @@ public class MainClass {
 
         else if (choice == REMOVE_ELEMENT_NAME){
             System.out.println("Введите через запятую элементы, которые хотите оставить в коллекции:");
-            String input = new Scanner(System.in).nextLine();
+            String input = sc.nextLine();
             String[] inputArray = splitToArray(input);
             if (inputArray == null){
                 return;
@@ -115,7 +116,7 @@ public class MainClass {
 
     private static void elementCommaRemove() {
         System.out.println("Введите через запятую слова, которые хотите удалить из коллекции:");
-        String input = new Scanner(System.in).nextLine();
+        String input = sc.nextLine();
         String[] inputArray = splitToArray(input);
         if (inputArray == null){
             return;
@@ -126,7 +127,7 @@ public class MainClass {
 
     private static void elementCommaAdd() {
         System.out.println("Введите через запятую слова, которые хотите добавить в коллекцию:");
-        String input = new Scanner(System.in).nextLine();
+        String input = sc.nextLine();
         String[] inputArray = splitToArray(input);
         if (inputArray == null){
             return;
@@ -137,19 +138,19 @@ public class MainClass {
     private static void elementRangeRemove() {
         System.out.println("1. Удалить элементы по индексам");
         System.out.println("2. Удалить элементы по значениям");
-        int choice = new Scanner(System.in).nextInt();
+        int choice = sc.nextInt();
         if (choice == REMOVE_ELEMENT_INDEX){
             System.out.println("Введите начальный индекс диапазона (от 0 до" + (al.size()-1) + "):");
-            int startIndex = new Scanner(System.in).nextInt();
+            int startIndex = sc.nextInt();
             System.out.println("Введите конечный индекс диапазона (от 0 до" + (al.size()-1) + "):");
-            int endIndex = new Scanner(System.in).nextInt();
+            int endIndex = sc.nextInt();
             removeRange(startIndex, endIndex);
         }
         else if (choice == REMOVE_ELEMENT_NAME){
             int startIndex = 0;
             int endIndex = 0;
             System.out.println("Введите начальное значение диапазона:");
-            String startName = new Scanner(System.in).next();
+            String startName = sc.next();
             if (al.contains(startName))
                 startIndex = al.indexOf(startName);
             else{
@@ -157,7 +158,7 @@ public class MainClass {
                 elementRangeRemove();
             }
             System.out.println("Введите конечное значение диапазона:");
-            String endName = new Scanner(System.in).next();
+            String endName = sc.next();
             if (al.contains(endName))
                 endIndex = al.indexOf(endName);
             else{
@@ -184,36 +185,36 @@ public class MainClass {
     }
 
     private static void elementRemove() {
-		System.out.println("1. Удалить элемент по индексу");
-		System.out.println("2. Удалить элемент по значению");
-		int choice = new Scanner(System.in).nextInt();
-		if (choice == REMOVE_ELEMENT_INDEX){
-			System.out.println("Введите индекс элемента, который хотите удалить. От 0 до " + (al.size()-1));
-			int input = new Scanner(System.in).nextInt();
-			if (input >= 0 && input < (al.size()-1)){
-				al.remove(input);
-			}
-			else {
-				System.out.println("Неверный индекс элемента");
-				elementRemove();
-			}
-		}
-		else if (choice == REMOVE_ELEMENT_NAME){
-			System.out.println("Введите значение, которое хотите удалить");
-			String input = new Scanner(System.in).next();
-			al.remove(input);
-		}
+        System.out.println("1. Удалить элемент по индексу");
+        System.out.println("2. Удалить элемент по значению");
+        int choice = sc.nextInt();
+        if (choice == REMOVE_ELEMENT_INDEX){
+            System.out.println("Введите индекс элемента, который хотите удалить. От 0 до " + (al.size()-1));
+            int input = sc.nextInt();
+            if (input >= 0 && input < (al.size()-1)){
+                al.remove(input);
+            }
+            else {
+                System.out.println("Неверный индекс элемента");
+                elementRemove();
+            }
+        }
+        else if (choice == REMOVE_ELEMENT_NAME){
+            System.out.println("Введите значение, которое хотите удалить");
+            String input = sc.next();
+            al.remove(input);
+        }
         al.trimToSize();
-	}
+    }
 
-	private static void listShow() {
-		System.out.println(al);
+    private static void listShow() {
+        System.out.println(al);
         System.out.println();
     }
 
-	private static void elementAdd() {
-		System.out.println("Введите то, что хотите добавить:");
-		String input = new Scanner(System.in).next();
-		al.add(input);
-	}
+    private static void elementAdd() {
+        System.out.println("Введите то, что хотите добавить:");
+        String input = sc.next();
+        al.add(input);
+    }
 }
