@@ -18,7 +18,6 @@ public class MainClass {
     private static final int REMOVE_ELEMENT_EXCEPT = 7;
     private static final int EXIT = 8;
 
-
     public static void main(String[] args) {
 		
 		while (true){
