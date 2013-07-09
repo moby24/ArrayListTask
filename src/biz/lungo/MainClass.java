@@ -21,15 +21,15 @@ public class MainClass {
     public static void main(String[] args) {
 		
 		while (true){
-			System.out.println("Âûáåðèòå äåéñòâèå:");
-			System.out.println("1. Äîáàâèòü ñëîâî");
-			System.out.println("2. Âûâåñòè êîëëåêöèþ íà ýêðàí");
-			System.out.println("3. Óäàëèòü ýëåìåíò");
-            System.out.println("4. Óäàëèòü ýëåìåíòû â äèàïàçîíå");
-            System.out.println("5. Äîáàâèòü ýëåìåíòû ÷åðåç çàïÿòóþ");
-            System.out.println("6. Óäàëèòü ýëåìåíòû ÷åðåç çàïÿòóþ");
-            System.out.println("7. Óäàëèòü âñå ýëåìåíòû, êðîìå óêàçàííûõ");
-            System.out.println("8. Âûéòè èç ïðîãðàììû");
+			System.out.println("Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ:");
+			System.out.println("1. Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÑÐ»Ð¾Ð²Ð¾");
+			System.out.println("2. Ð’Ñ‹Ð²ÐµÑÑ‚Ð¸ ÐºÐ¾Ð»Ð»ÐµÐºÑ†Ð¸ÑŽ Ð½Ð° ÑÐºÑ€Ð°Ð½");
+			System.out.println("3. Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚");
+            System.out.println("4. Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ð² Ð´Ð¸Ð°Ð¿Ð°Ð·Ð¾Ð½Ðµ");
+            System.out.println("5. Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ñ‡ÐµÑ€ÐµÐ· Ð·Ð°Ð¿ÑÑ‚ÑƒÑŽ");
+            System.out.println("6. Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ñ‡ÐµÑ€ÐµÐ· Ð·Ð°Ð¿ÑÑ‚ÑƒÑŽ");
+            System.out.println("7. Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ Ð²ÑÐµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹, ÐºÑ€Ð¾Ð¼Ðµ ÑƒÐºÐ°Ð·Ð°Ð½Ð½Ñ‹Ñ…");
+            System.out.println("8. Ð’Ñ‹Ð¹Ñ‚Ð¸ Ð¸Ð· Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹");
             int choice = new Scanner(System.in).nextInt();
 			if (choice == ADD){
 				elementAdd();
@@ -62,17 +62,17 @@ public class MainClass {
                 break;
             }
 			else {
-				System.out.println("Íåâåðíûé âûáîð");
+				System.out.println("ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð²Ñ‹Ð±Ð¾Ñ€");
 			}
 		}
 	}
 
     private static void elementExceptRemove() {
-        System.out.println("1. Óäàëèòü ýëåìåíòû ïî èíäåêñàì");
-        System.out.println("2. Óäàëèòü ýëåìåíòû ïî çíà÷åíèÿì");
+        System.out.println("1. Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ð¿Ð¾ Ð¸Ð½Ð´ÐµÐºÑÐ°Ð¼");
+        System.out.println("2. Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ð¿Ð¾ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸ÑÐ¼");
         int choice = new Scanner(System.in).nextInt();
         if (choice == REMOVE_ELEMENT_INDEX){
-            System.out.println("Ââåäèòå ÷åðåç çàïÿòóþ èíäåêñû ýëåìåíòîâ, êîòîðûå õîòèòå îñòàâèòü â êîëëåêöèè (îò 0 äî " + (al.size()-1) + "):");
+            System.out.println("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡ÐµÑ€ÐµÐ· Ð·Ð°Ð¿ÑÑ‚ÑƒÑŽ Ð¸Ð½Ð´ÐµÐºÑÑ‹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð², ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ðµ Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ Ð¾ÑÑ‚Ð°Ð²Ð¸Ñ‚ÑŒ Ð² ÐºÐ¾Ð»Ð»ÐµÐºÑ†Ð¸Ð¸ (Ð¾Ñ‚ 0 Ð´Ð¾ " + (al.size()-1) + "):");
             String input = new Scanner(System.in).nextLine();
             String[] inputArray = splitToArray(input);
             if (inputArray == null){
@@ -88,7 +88,7 @@ public class MainClass {
         }
 
         else if (choice == REMOVE_ELEMENT_NAME){
-            System.out.println("Ââåäèòå ÷åðåç çàïÿòóþ ýëåìåíòû, êîòîðûå õîòèòå îñòàâèòü â êîëëåêöèè:");
+            System.out.println("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡ÐµÑ€ÐµÐ· Ð·Ð°Ð¿ÑÑ‚ÑƒÑŽ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ðµ Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ Ð¾ÑÑ‚Ð°Ð²Ð¸Ñ‚ÑŒ Ð² ÐºÐ¾Ð»Ð»ÐµÐºÑ†Ð¸Ð¸:");
             String input = new Scanner(System.in).nextLine();
             String[] inputArray = splitToArray(input);
             if (inputArray == null){
@@ -108,13 +108,13 @@ public class MainClass {
             inputArray = input.split(",", -2);
         }
         else{
-            System.out.println("Îøèáêà ââîäà! Âû íè÷åãî íå ââåëè, ëèáî íå ðàçäåëÿëè ýëåìåíòû çàïÿòîé.");
+            System.out.println("ÐžÑˆÐ¸Ð±ÐºÐ° Ð²Ð²Ð¾Ð´Ð°! Ð’Ñ‹ Ð½Ð¸Ñ‡ÐµÐ³Ð¾ Ð½Ðµ Ð²Ð²ÐµÐ»Ð¸, Ð»Ð¸Ð±Ð¾ Ð½Ðµ Ñ€Ð°Ð·Ð´ÐµÐ»ÑÐ»Ð¸ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ð·Ð°Ð¿ÑÑ‚Ð¾Ð¹.");
         }
         return inputArray;
     }
 
     private static void elementCommaRemove() {
-        System.out.println("Ââåäèòå ÷åðåç çàïÿòóþ ñëîâà, êîòîðûå õîòèòå óäàëèòü èç êîëëåêöèè:");
+        System.out.println("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡ÐµÑ€ÐµÐ· Ð·Ð°Ð¿ÑÑ‚ÑƒÑŽ ÑÐ»Ð¾Ð²Ð°, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ðµ Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ ÑƒÐ´Ð°Ð»Ð¸Ñ‚ÑŒ Ð¸Ð· ÐºÐ¾Ð»Ð»ÐµÐºÑ†Ð¸Ð¸:");
         String input = new Scanner(System.in).nextLine();
         String[] inputArray = splitToArray(input);
         if (inputArray == null){
@@ -125,7 +125,7 @@ public class MainClass {
     }
 
     private static void elementCommaAdd() {
-        System.out.println("Ââåäèòå ÷åðåç çàïÿòóþ ñëîâà, êîòîðûå õîòèòå äîáàâèòü â êîëëåêöèþ:");
+        System.out.println("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡ÐµÑ€ÐµÐ· Ð·Ð°Ð¿ÑÑ‚ÑƒÑŽ ÑÐ»Ð¾Ð²Ð°, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ðµ Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ð² ÐºÐ¾Ð»Ð»ÐµÐºÑ†Ð¸ÑŽ:");
         String input = new Scanner(System.in).nextLine();
         String[] inputArray = splitToArray(input);
         if (inputArray == null){
@@ -135,33 +135,33 @@ public class MainClass {
     }
 
     private static void elementRangeRemove() {
-        System.out.println("1. Óäàëèòü ýëåìåíòû ïî èíäåêñàì");
-        System.out.println("2. Óäàëèòü ýëåìåíòû ïî çíà÷åíèÿì");
+        System.out.println("1. Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ð¿Ð¾ Ð¸Ð½Ð´ÐµÐºÑÐ°Ð¼");
+        System.out.println("2. Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ð¿Ð¾ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸ÑÐ¼");
         int choice = new Scanner(System.in).nextInt();
         if (choice == REMOVE_ELEMENT_INDEX){
-            System.out.println("Ââåäèòå íà÷àëüíûé èíäåêñ äèàïàçîíà (îò 0 äî" + (al.size()-1) + "):");
+            System.out.println("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ñ‡Ð°Ð»ÑŒÐ½Ñ‹Ð¹ Ð¸Ð½Ð´ÐµÐºÑ Ð´Ð¸Ð°Ð¿Ð°Ð·Ð¾Ð½Ð° (Ð¾Ñ‚ 0 Ð´Ð¾" + (al.size()-1) + "):");
             int startIndex = new Scanner(System.in).nextInt();
-            System.out.println("Ââåäèòå êîíå÷íûé èíäåêñ äèàïàçîíà (îò 0 äî" + (al.size()-1) + "):");
+            System.out.println("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð½ÐµÑ‡Ð½Ñ‹Ð¹ Ð¸Ð½Ð´ÐµÐºÑ Ð´Ð¸Ð°Ð¿Ð°Ð·Ð¾Ð½Ð° (Ð¾Ñ‚ 0 Ð´Ð¾" + (al.size()-1) + "):");
             int endIndex = new Scanner(System.in).nextInt();
             removeRange(startIndex, endIndex);
         }
         else if (choice == REMOVE_ELEMENT_NAME){
             int startIndex = 0;
             int endIndex = 0;
-            System.out.println("Ââåäèòå íà÷àëüíîå çíà÷åíèå äèàïàçîíà:");
+            System.out.println("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ñ‡Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð´Ð¸Ð°Ð¿Ð°Ð·Ð¾Ð½Ð°:");
             String startName = new Scanner(System.in).next();
             if (al.contains(startName))
                 startIndex = al.indexOf(startName);
             else{
-                System.out.println("Íåò òàêîãî ñëîâà â ñïèñêå");
+                System.out.println("ÐÐµÑ‚ Ñ‚Ð°ÐºÐ¾Ð³Ð¾ ÑÐ»Ð¾Ð²Ð° Ð² ÑÐ¿Ð¸ÑÐºÐµ");
                 elementRangeRemove();
             }
-            System.out.println("Ââåäèòå êîíå÷íîå çíà÷åíèå äèàïàçîíà:");
+            System.out.println("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð½ÐµÑ‡Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð´Ð¸Ð°Ð¿Ð°Ð·Ð¾Ð½Ð°:");
             String endName = new Scanner(System.in).next();
             if (al.contains(endName))
                 endIndex = al.indexOf(endName);
             else{
-                System.out.println("Íåò òàêîãî ñëîâà â ñïèñêå");
+                System.out.println("ÐÐµÑ‚ Ñ‚Ð°ÐºÐ¾Ð³Ð¾ ÑÐ»Ð¾Ð²Ð° Ð² ÑÐ¿Ð¸ÑÐºÐµ");
                 elementRangeRemove();
             }
             removeRange(startIndex, endIndex);
@@ -176,7 +176,7 @@ public class MainClass {
             endIndex = tempIndex;
         }
         if (endIndex > al.size()-1 || startIndex < 0){
-            System.out.println("Èíäåêñû âûõîäÿò çà ãðàíèöû êîëëåêöèè.");
+            System.out.println("Ð˜Ð½Ð´ÐµÐºÑÑ‹ Ð²Ñ‹Ñ…Ð¾Ð´ÑÑ‚ Ð·Ð° Ð³Ñ€Ð°Ð½Ð¸Ñ†Ñ‹ ÐºÐ¾Ð»Ð»ÐµÐºÑ†Ð¸Ð¸.");
             elementRangeRemove();
         }
         List<String> subList = al.subList(startIndex, endIndex);
@@ -184,22 +184,22 @@ public class MainClass {
     }
 
     private static void elementRemove() {
-		System.out.println("1. Óäàëèòü ýëåìåíò ïî èíäåêñó");
-		System.out.println("2. Óäàëèòü ýëåìåíò ïî çíà÷åíèþ");
+		System.out.println("1. Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð¿Ð¾ Ð¸Ð½Ð´ÐµÐºÑÑƒ");
+		System.out.println("2. Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð¿Ð¾ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸ÑŽ");
 		int choice = new Scanner(System.in).nextInt();
 		if (choice == REMOVE_ELEMENT_INDEX){
-			System.out.println("Ââåäèòå èíäåêñ ýëåìåíòà, êîòîðûé õîòèòå óäàëèòü. Îò 0 äî " + (al.size()-1));
+			System.out.println("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ð´ÐµÐºÑ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¹ Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ ÑƒÐ´Ð°Ð»Ð¸Ñ‚ÑŒ. ÐžÑ‚ 0 Ð´Ð¾ " + (al.size()-1));
 			int input = new Scanner(System.in).nextInt();
 			if (input >= 0 && input < (al.size()-1)){
 				al.remove(input);
 			}
 			else {
-				System.out.println("Íåâåðíûé èíäåêñ ýëåìåíòà");
+				System.out.println("ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð¸Ð½Ð´ÐµÐºÑ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°");
 				elementRemove();
 			}
 		}
 		else if (choice == REMOVE_ELEMENT_NAME){
-			System.out.println("Ââåäèòå çíà÷åíèå, êîòîðîå õîòèòå óäàëèòü");
+			System.out.println("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ, ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ðµ Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ ÑƒÐ´Ð°Ð»Ð¸Ñ‚ÑŒ");
 			String input = new Scanner(System.in).next();
 			al.remove(input);
 		}
@@ -212,7 +212,7 @@ public class MainClass {
     }
 
 	private static void elementAdd() {
-		System.out.println("Ââåäèòå òî, ÷òî õîòèòå äîáàâèòü:");
+		System.out.println("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‚Ð¾, Ñ‡Ñ‚Ð¾ Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ:");
 		String input = new Scanner(System.in).next();
 		al.add(input);
 	}
