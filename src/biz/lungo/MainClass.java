@@ -32,38 +32,43 @@ public class MainClass {
             System.out.println("7. Удалить все элементы, кроме указанных");
             System.out.println("8. Выйти из программы");
             int choice = sc.nextInt();
-            if (choice == ADD){
-                elementAdd();
-                listShow();
-            }
-            else if (choice == SHOW_COLLECTION){
-                listShow();
-            }
-            else if (choice == REMOVE_ELEMENT){
-                elementRemove();
-                listShow();
-            }
-            else if (choice == REMOVE_RANGE){
-                elementRangeRemove();
-                listShow();
-            }
-            else if (choice == ADD_ELEMENT_COMMA){
-                elementCommaAdd();
-                listShow();
-            }
-            else if (choice == REMOVE_ELEMENT_COMMA){
-                elementCommaRemove();
-                listShow();
-            }
-            else if (choice == REMOVE_ELEMENT_EXCEPT){
-                elementExceptRemove();
-                listShow();
-            }
-            else if (choice == EXIT){
-                break;
-            }
-            else {
-                System.out.println("Неверный выбор");
+            switch (choice){
+                case ADD:
+                    elementAdd();
+                    listShow();
+                    break;
+            
+                case SHOW_COLLECTION:
+                    listShow();
+                    break;
+            
+                case REMOVE_ELEMENT:
+                    elementRemove();
+                    listShow();
+                    break;
+            
+                case REMOVE_RANGE:
+                    elementRangeRemove();
+                    listShow();
+                    break;
+            
+                case ADD_ELEMENT_COMMA:
+                    elementCommaAdd();
+                    listShow();
+                    break;
+            
+                case REMOVE_ELEMENT_COMMA:
+                    elementCommaRemove();
+                    listShow();
+                    break;
+            
+                case REMOVE_ELEMENT_EXCEPT:
+                    elementExceptRemove();
+                    listShow();
+                    break;
+            
+                case EXIT:
+                    break;
             }
         }
     }
